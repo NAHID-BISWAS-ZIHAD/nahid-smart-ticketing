@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahid Smart Ticketing</title>
+    <!-- tailwind and daisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css link and google font -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="font-inter">
+    <header class="container mx-auto mb-14">
+        <nav>
+            <div class="navbar bg-base-100 font-raleway">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost p-0 lg:text-2xl font-extrabold">Nahid-Paribahan</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-semibold">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn font-bold">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <!-- banner section -->
+        <div>
+            <div
+                class="hero bg-[url(images/banner.png)] md:h-[550px] lg:h-[550px] w-full bg-cover bg-center rounded-xl">
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-xl">
+                        <h1 class="mb-5 text-2xl md:text-5xl lg:text-5xl font-bold">End-to-End Travel with <span
+                                class="text-[#1DD100]">Nahid Paribahan</span></h1>
+                        <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The
+                            integrated testing features allow for a streamlined .</p>
+                        <button class="btn btn-primary bg-[#1DD100] text-black border-none">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container mx-auto">
+        <!-- best offer for you section start -->
+        <section class="space-y-11 mb-14">
+            <h1 class="text-4xl font-bold text-center ">Best offers for you</h1>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-[#FFBF0F] flex flex-col lg:flex-row justify-between p-12 rounded-3xl gap-6">
+                    <div class="space-y-2 flex flex-col justify-center lg:justify-start items-center lg:items-start">
+                        <h1 class="font-black text-4xl">15% OFF</h1>
+                        <p class="font-semibold">on your next purchase</p>
+                        <p class="font-medium">use by february 2024</p>
+                    </div>
+                    <div class="text-center font-raleway flex flex-col justify-center items-center space-y-2">
+                        <h1 class="text-3xl font-bold">NEW15</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+                <div class="bg-[#F78C9C] flex flex-col lg:flex-row justify-between p-12 rounded-3xl gap-6">
+                    <div class="space-y-2 flex flex-col justify-center lg:justify-start items-center lg:items-start">
+                        <h1 class="font-black text-4xl">20% OFF</h1>
+                        <p class="font-semibold">on your next purchase</p>
+                        <p class="font-medium">use by february 2024</p>
+                    </div>
+                    <div class="text-center font-raleway flex flex-col justify-center items-center space-y-2">
+                        <h1 class="text-3xl font-bold">Couple 20</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-ghost text-[#1DD100] border-[#1DD100]">See All Offers</button>
+            </div>
+        </section>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
