@@ -8,7 +8,7 @@ for (const button of buttons) {
     button.addEventListener('click', function clickHandler() {
         let availableSeats = document.getElementById('available-seats');
         let selectSeat = document.getElementById('add-seat');
-
+        const inputCoupon = document.getElementById('input-coupon');
         if (selectSeat.innerText < 4) {
             button.style.backgroundColor = 'green';
             button.style.color = 'white';
@@ -17,6 +17,7 @@ for (const button of buttons) {
             selectSeat.innerText = addSeat;
             count = selectSeat.innerText;
             seatCount();
+
             lessSeat = lessSeat - 1;
             availableSeats.innerText = lessSeat;
 
@@ -40,9 +41,11 @@ for (const button of buttons) {
 
             document.getElementById('grand-total').innerText = totalPrice.innerText;
 
+            if (selectSeat.innerText === '4') {
+                inputCoupon.removeAttribute('disabled');
+            }
             button.removeEventListener('click', clickHandler);
         }
-
         else {
             alert('Already You Select 4 Ticket');
         }
@@ -57,7 +60,6 @@ function applyButton() {
     const inputContainer = document.getElementById('input-container');
 
     if (inputCoupon === 'NEW15') {
-
         const discountPrice = convertTotalPrice * 0.15;
         document.getElementById('discount-price').innerText = discountPrice;
         const finalPrice = convertTotalPrice - discountPrice;
@@ -65,7 +67,6 @@ function applyButton() {
         inputContainer.style.display = 'none';
     }
     else if (inputCoupon === 'Couple 20') {
-
         const discountPrice = convertTotalPrice * 0.20;
         document.getElementById('discount-price').innerText = discountPrice;
         const finalPrice = convertTotalPrice - discountPrice;
@@ -79,7 +80,6 @@ function applyButton() {
 };
 
 function seatCount() {
-    console.log(count);
     const inputPhone = document.getElementById('input-phone');
     inputPhone.addEventListener('keyup', function inputValue(event) {
         const getValue = event.target.value;
@@ -92,16 +92,4 @@ function seatCount() {
         }
     });
 
-    const inputCoupon = document.getElementById('input-coupon');
-    if(count === 4){
-        inputCoupon.removeAttribute('disabled');
-    }
-    
 }
-// const seatSelect = document.getElementById('add-seat');
-// console.log('vaia eita seat ar value', seatSelect,addSeat,count,selectSeat);
-
-
-
-
-
